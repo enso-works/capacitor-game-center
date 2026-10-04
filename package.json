@@ -1,0 +1,74 @@
+{
+  "name": "@bavrk/capacitor-game-center",
+  "version": "0.1.0",
+  "description": "Game Center for Capacitor games on iOS: sign-in, leaderboards, achievements and Apple's Game Center screens.",
+  "license": "MIT",
+  "author": "bavrk (https://bavrk.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enso-works/capacitor-game-center.git"
+  },
+  "bugs": {
+    "url": "https://github.com/enso-works/capacitor-game-center/issues"
+  },
+  "homepage": "https://github.com/enso-works/capacitor-game-center#readme",
+  "keywords": [
+    "capacitor",
+    "capacitor-plugin",
+    "game-center",
+    "gamekit",
+    "ios",
+    "leaderboards",
+    "achievements"
+  ],
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/",
+    "ios/Sources/",
+    "Package.swift",
+    "BavrkCapacitorGameCenter.podspec"
+  ],
+  "sideEffects": false,
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && tsc -p tsconfig.cjs.json && node scripts/cjs-package.js",
+    "test": "vitest run",
+    "verify:ios": "xcodebuild -scheme BavrkCapacitorGameCenter -destination 'generic/platform=iOS Simulator' build",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@capacitor/core": ">=7.0.0 <9.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/core": "^8.5.2",
+    "typescript": "~6.0",
+    "vitest": "^5.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

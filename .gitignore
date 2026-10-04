@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.tgz
+
+# Swift Package Manager and Xcode
+.build/
+.swiftpm/
+Package.resolved
+DerivedData/
+xcuserdata/
+
+.DS_Store
