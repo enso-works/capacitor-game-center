@@ -45,7 +45,7 @@ export interface GameCenterPlugin {
   reportAchievements(options: ReportAchievementsOptions): Promise<void>;
   /** Presents Game Center's screen over the app. */
   show(options?: ShowOptions): Promise<void>;
-  /** Each change of sign-in after the first answer, such as signing in from the Settings app. */
+  /** Each answer from Game Center: the first, and each later change, such as signing in from the Settings app. */
   addListener(eventName: 'signedIn', listener: (state: SignInResult) => void): Promise<PluginListenerHandle>;
   removeAllListeners(): Promise<void>;
 }
