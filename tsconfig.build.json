@@ -3,9 +3,7 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist/esm",
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true
+    "declaration": true
   },
   "include": ["src"],
   "exclude": ["src/**/*.test.ts"]
