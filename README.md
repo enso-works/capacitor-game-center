@@ -8,7 +8,34 @@ Apple's Game Center screens.
   not send Game Center a score or achievement it already has.
 - On the web, the plugin is never signed in and every call resolves without doing anything.
 
-Extracted from [Rallo](https://rallo.bavrk.com), a 3D tennis game.
+## Used in Rallo
+
+<p align="center">
+  <a href="https://rallo.bavrk.com"><img src="https://raw.githubusercontent.com/enso-works/capacitor-game-center/main/docs/images/rallo-rally.jpg" alt="Rallo: 3D Tennis Game, a rally on centre court" width="820"></a>
+</p>
+
+This plugin runs Game Center in [**Rallo: 3D Tennis Game**](https://rallo.bavrk.com) for iPhone and iPad, where it
+started. In Rallo:
+
+- **Five leaderboards**: experience, matches won, tournament titles, the best practice run, and a **daily challenge**
+  board that starts over every day (`submitScore(id, value, { daily: true })`).
+- **Twenty achievements**, from a first win to The Crown, each reported once as the player reaches it.
+- **Sign-in at launch**: Game Center shows its sheet the first time, and a player who turns it on later in the
+  Settings app comes back signed in, through `signIn(onChange)`.
+- **A Game Center button** on the home screen that opens Apple's dashboard with `show()`.
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://rallo.bavrk.com"><img src="https://raw.githubusercontent.com/enso-works/capacitor-game-center/main/docs/images/rallo-home.jpg" alt="Rallo's home screen, with the Game Center button at the top right"></a></td>
+    <td width="50%"><a href="https://rallo.bavrk.com"><img src="https://raw.githubusercontent.com/enso-works/capacitor-game-center/main/docs/images/rallo-progress.jpg" alt="Rallo's progress screen: 20 achievements and 5 Game Center leaderboards"></a></td>
+  </tr>
+  <tr>
+    <td align="center">The home screen, with the Game Center button (top right)</td>
+    <td align="center">Achievements, also reported to Game Center</td>
+  </tr>
+</table>
+
+<p align="center"><a href="https://rallo.bavrk.com"><b>rallo.bavrk.com</b></a></p>
 
 ## Install
 
